@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>grammyswitch</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="board">
+      <header class="board__header">
+        <h1>grammyswitch</h1>
+        <p class="board__subtitle">
+          <span id="on-count">0</span> of <span id="total-count">0</span> switches on
+        </p>
+      </header>
+
+      <ul id="switch-list" class="switch-list" aria-live="polite"></ul>
+
+      <footer class="board__footer">
+        <button id="all-on" type="button" class="btn btn--primary">All on</button>
+        <button id="all-off" type="button" class="btn">All off</button>
+      </footer>
+    </main>
+
+    <script src="./app.js" type="module"></script>
+  </body>
+</html>
