@@ -49,8 +49,8 @@ function render(state) {
       button.appendChild(knob);
 
       button.addEventListener('click', async () => {
-        const next = await toggle(sw.id);
-        render(next);
+        await toggle(sw.id);
+        render(await fetchState());
       });
 
       li.append(label, button);
