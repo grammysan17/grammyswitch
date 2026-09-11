@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vw-voice-copilot"
+version = "0.1.0"
+description = "Vectorworks Voice Copilot — Phase 0 bridge, intent, voice stubs"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Graham Sattinger" }]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0"]
+
+[project.scripts]
+vw-bridge = "bridge.server:main"
+vw-bridge-client = "bridge.client:main"
+vw-intent = "intent.cli:main"
+vw-voice = "voice.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["bridge*", "intent*", "voice*", "plugin*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
